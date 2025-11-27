@@ -10,915 +10,541 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
-            line-height: 1.8;
+            line-height: 1.7;
             color: #1a3a2e;
             background: #fafafa;
+            font-size: 15px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         header {
             background: #ffffff;
             color: #2c3e50;
-            padding: 60px 40px;
+            padding: 40px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 260px;
         }
-        
-        /* ヘッダー背景のパネル - シンプルに2枚のみ */
+
         header::before {
             content: '';
             position: absolute;
-            top: -8%;
-            left: -6%;
-            width: 22%;
-            height: 35%;
+            top: -10%;
+            left: -8%;
+            width: 26%;
+            height: 40%;
             background: #e8f5e9;
             transform: rotate(45deg);
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.04);
             z-index: 0;
         }
-        
+
         header::after {
             content: '';
             position: absolute;
-            bottom: -5%;
-            right: -4%;
-            width: 20%;
-            height: 32%;
+            bottom: -8%;
+            right: -6%;
+            width: 22%;
+            height: 36%;
             background: #2ecc71;
             transform: rotate(45deg);
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             z-index: 0;
         }
-        
-        /* テキスト背景の白帯 */
+
         .header-text-bg {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 85%;
-            height: 70%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            inset: 18% 6%;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 16px;
             z-index: 1;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
         }
-        
-        .header-panel-1 {
-            display: none;
-        }
-        
-        .header-panel-2 {
-            position: absolute;
-            top: 12%;
-            right: 8%;
-            width: 18%;
-            height: 28%;
-            background: #c8e6c9;
-            transform: rotate(45deg);
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            z-index: 0;
-        }
-        
-        .header-panel-3 {
-            display: none;
-        }
-        
-        .header-panel-4 {
-            display: none;
-        }
-        
-        .header-panel-5 {
-            display: none;
-        }
-        
+
         .logo {
-            background: white;
-            display: inline-block;
-            padding: 15px 45px;
-            border-radius: 60px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            background: transparent;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 28px;
+            border-radius: 999px;
+            margin-bottom: 16px;
             position: relative;
             z-index: 10;
-            border: 2px solid #f0f0f0;
-            transition: all 0.3s ease;
-            max-width: 90%;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        
-        .logo:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-        }
-        
+
         .logo-image {
             max-width: 100%;
             height: auto;
-            max-height: 80px;
+            max-height: 64px;
             display: block;
-            margin: 0 auto;
         }
-        
+
         .logo h1 {
-            font-size: 3.2em;
+            font-size: 1.6rem;
             background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-weight: 900;
-            letter-spacing: 5px;
-            margin: 0;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            margin-top: 6px;
         }
-        
+
         header p {
-            font-size: 1.15em;
-            margin-top: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
             position: relative;
             z-index: 10;
-            font-weight: 300;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-weight: 400;
         }
-        
+
         .intro {
             background: white;
-            padding: 50px 45px;
-            margin: 40px 20px;
-            border-radius: 25px;
+            padding: 24px 18px;
+            margin: 20px 12px 16px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
-            border-top: 6px solid #ff6b35;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            border-top: 4px solid #ff6b35;
             position: relative;
-            overflow: hidden;
         }
-        
+
         .intro::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
+            height: 4px;
             background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
         }
-        
+
         .intro::after {
             content: '🎉';
             position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 3em;
-            opacity: 0.15;
-            animation: celebrate 3s ease-in-out infinite;
+            top: 10px;
+            right: 16px;
+            font-size: 2rem;
+            opacity: 0.12;
         }
-        
-        @keyframes celebrate {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(-10deg) scale(1.1); }
-            75% { transform: rotate(10deg) scale(1.1); }
-        }
-        
+
         .intro h2 {
             color: #1a3a2e;
-            font-size: 2.3em;
-            margin-bottom: 18px;
-            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            font-weight: 700;
         }
-        
+
         .intro p {
             color: #4a6358;
-            font-size: 1.15em;
-            font-weight: 500;
+            font-size: 0.9rem;
         }
-        
+
         .content {
-            padding: 20px;
+            padding: 0 12px 24px;
         }
-        
+
         .step {
             background: white;
-            margin-bottom: 40px;
-            border-radius: 25px;
+            margin-bottom: 20px;
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-            border: 2px solid #d5f4e6;
-            transition: all 0.4s ease;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+            border: 1px solid #d5f4e6;
         }
-        
-        .step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 45px rgba(46, 204, 113, 0.25);
-            border-color: #2ecc71;
-        }
-        
-        .step:nth-child(odd) .step-content {
-            background: linear-gradient(to bottom, #ffffff 0%, #f9fdfb 100%);
-        }
-        
-        .step:nth-child(even) .step-content {
-            background: white;
-        }
-        
+
         .step-header {
             background: #ffffff;
-            padding: 50px 50px;
+            padding: 18px 18px 14px;
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
-            min-height: 160px;
+            min-height: 80px;
         }
-        
-        /* ステップヘッダーのパネル - シンプルに2枚のみ */
+
         .step-header::before {
             content: '';
             position: absolute;
-            top: -12%;
-            left: -5%;
-            width: 20%;
-            height: 38%;
+            top: -20%;
+            left: -8%;
+            width: 26%;
+            height: 55%;
             background: #e8f5e9;
             transform: rotate(45deg);
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
             z-index: 0;
         }
-        
+
         .step-header::after {
             content: '';
             position: absolute;
-            bottom: -8%;
-            right: -3%;
-            width: 18%;
-            height: 35%;
+            bottom: -25%;
+            right: -10%;
+            width: 24%;
+            height: 55%;
             background: #2ecc71;
             transform: rotate(45deg);
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             z-index: 0;
         }
-        
-        /* テキスト背景の白帯 */
-        .step-text-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            height: 75%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            z-index: 1;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-        }
-        
-        .step-panel-1 {
-            display: none;
-        }
-        
+
+        /* 角丸 in 角丸を減らす：白帯を削除 */
+        .step-text-bg,
         .step-panel-2 {
-            position: absolute;
-            top: 18%;
-            right: 10%;
-            width: 16%;
-            height: 30%;
-            background: #c8e6c9;
-            transform: rotate(45deg);
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            z-index: 0;
-        }
-        
-        .step-panel-3 {
             display: none;
         }
-        
-        .step-panel-4 {
-            display: none;
-        }
-        
-        .step-panel-5 {
-            display: none;
-        }
-        
+
         .step-number {
             background: white;
             color: #2ecc71;
-            width: 85px;
-            height: 85px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.6em;
-            font-weight: 900;
-            margin-right: 35px;
-            flex-shrink: 0;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-            border: 3px solid #f0f0f0;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .step-title {
-            font-size: 2.4em;
-            color: #2c3e50;
+            font-size: 1.4rem;
             font-weight: 800;
+            margin-right: 10px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 2px solid #eef5f0;
             position: relative;
-            z-index: 10;
-            line-height: 1.3;
+            z-index: 1;
         }
-        
+
+        .step-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
         .step-content {
-            padding: 45px;
+            padding: 16px 16px 18px;
         }
-        
+
         .step-content > p:first-child {
-            font-size: 1.2em;
+            font-size: 0.95rem;
             color: #4a6358;
-            margin-bottom: 28px;
+            margin-bottom: 14px;
             font-weight: 600;
         }
-        
+
         .image-placeholder {
             width: 100%;
-            height: 320px;
+            height: 180px;
             background: linear-gradient(135deg, #f0f4f8 0%, #e1e8ed 100%);
-            border-radius: 15px;
-            margin: 25px 0;
+            border-radius: 10px;
+            margin: 12px 0;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.05);
-            border: 2px solid #e1e8ed;
+            border: 1px solid #e1e8ed;
         }
-        
+
         .image-placeholder img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .sub-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 10px 0 4px;
         }
-        
+
         .sub-step {
-            background: linear-gradient(to bottom, #ffffff 0%, #f9fdfb 100%);
-            padding: 35px;
-            border-radius: 20px;
-            border: 3px solid #d5f4e6;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            background: #ffffff;
+            padding: 12px 12px 14px;
+            border-radius: 10px;
+            border: 1px solid #d5f4e6;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
         }
-        
-        .sub-step:hover {
-            border-color: #2ecc71;
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
-        }
-        
+
         .sub-step-number {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: white;
-            padding: 8px 22px;
-            border-radius: 30px;
-            margin-bottom: 18px;
-            font-weight: 800;
-            font-size: 1em;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-            position: relative;
-            transition: all 0.3s ease;
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 0.75rem;
         }
-        
-        .sub-step-number:hover {
-            transform: rotate(-5deg) scale(1.15);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
-        }
-        
-        .sub-step-number::after {
-            content: '→';
-            margin-left: 10px;
-            font-size: 1.3em;
-        }
-        
+
         .sub-step-title {
-            font-size: 1.45em;
+            font-size: 0.98rem;
             color: #1a3a2e;
-            font-weight: 800;
-            margin-bottom: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
-        
+
         .sub-step p {
             color: #4a6358;
-            line-height: 1.8;
+            line-height: 1.6;
+            font-size: 0.86rem;
             font-weight: 500;
         }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #fff8f0 0%, #ffead4 100%);
-            padding: 32px;
-            border-radius: 18px;
-            margin: 28px 0;
-            border-left: 6px solid #ff6b35;
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+
+        /* 「詳細を確認する」だけ一段小さく */
+        .sub-step.detail-step .sub-step-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
         }
-        
+        .sub-step.detail-step p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: #fff8f0;
+            padding: 14px 14px;
+            border-radius: 10px;
+            margin: 14px 0;
+            border-left: 4px solid #ff6b35;
+            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.12);
+        }
+
         .highlight-box h3 {
             color: #d84315;
-            font-weight: 800;
-            margin-bottom: 15px;
-            font-size: 1.35em;
+            font-weight: 700;
+            margin-bottom: 6px;
+            font-size: 0.98rem;
         }
-        
+
         .highlight-box p {
             color: #4a6358;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
-        
+
         .payment-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 10px 0;
         }
-        
+
         .payment-card {
             background: white;
-            padding: 40px 28px;
-            border-radius: 20px;
+            padding: 14px 14px 16px;
+            border-radius: 10px;
             text-align: center;
-            border: 3px solid #d5f4e6;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #d5f4e6;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
         }
-        
-        .payment-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 107, 53, 0.15), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-        }
-        
-        .payment-card:hover::before {
-            left: 100%;
-        }
-        
-        .payment-card:hover {
-            border-color: #ff6b35;
-            transform: translateY(-10px) rotate(-3deg);
-            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.25);
-        }
-        
+
         .payment-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
-            display: inline-block;
-            transition: all 0.3s ease;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
         }
-        
-        .payment-card:hover .payment-icon {
-            transform: scale(1.3) rotate(15deg);
-            animation: wiggle 0.5s ease-in-out;
-        }
-        
-        @keyframes wiggle {
-            0%, 100% { transform: scale(1.3) rotate(15deg); }
-            25% { transform: scale(1.3) rotate(-8deg); }
-            75% { transform: scale(1.3) rotate(20deg); }
-        }
-        
+
         .payment-title {
-            font-size: 1.55em;
+            font-size: 0.98rem;
             color: #1a3a2e;
-            font-weight: 800;
-            margin-bottom: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
-        
+
         .payment-card p {
             color: #4a6358;
-            font-weight: 500;
-            line-height: 1.7;
+            font-size: 0.86rem;
+            line-height: 1.5;
         }
-        
+
         .shipping-flow {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 40px 0;
-            position: relative;
-            padding: 20px 0;
+            flex-direction: column;
+            gap: 16px;
+            margin: 10px 0;
         }
-        
-        .shipping-flow::before {
-            content: '';
-            position: absolute;
-            top: 50px;
-            left: 12%;
-            right: 12%;
-            height: 5px;
-            background: linear-gradient(90deg, #2ecc71 0%, #1abc9c 50%, #27ae60 100%);
-            z-index: 0;
-            box-shadow: 0 3px 12px rgba(46, 204, 113, 0.4);
-        }
-        
+
         .shipping-item {
             text-align: center;
-            flex: 1;
-            position: relative;
-            z-index: 1;
         }
-        
+
         .shipping-circle {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 900;
-            font-size: 1.8em;
-            box-shadow: 0 8px 30px rgba(46, 204, 113, 0.5);
-            border: 6px solid white;
-            position: relative;
-            transition: all 0.4s ease;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border: 4px solid white;
+            box-shadow: 0 4px 16px rgba(46, 204, 113, 0.4);
         }
-        
-        .shipping-circle::after {
-            content: '✓';
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            background: #ff6b35;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7em;
-            opacity: 0;
-            transform: scale(0);
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(255, 107, 53, 0.4);
-        }
-        
-        .shipping-item:hover .shipping-circle {
-            transform: scale(1.2) rotate(8deg);
-            box-shadow: 0 12px 40px rgba(46, 204, 113, 0.6);
-        }
-        
-        .shipping-item:hover .shipping-circle::after {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
+
         .shipping-item strong {
             display: block;
-            font-size: 1.3em;
+            font-size: 0.95rem;
             color: #1a3a2e;
-            margin-bottom: 10px;
-            font-weight: 800;
+            margin-bottom: 2px;
+            font-weight: 700;
         }
-        
+
         .shipping-item p {
             color: #4a6358;
-            font-size: 1em;
-            font-weight: 500;
+            font-size: 0.84rem;
         }
-        
+
         .support-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 10px 0;
         }
-        
+
         .support-card {
-            background: linear-gradient(135deg, #2ecc71 0%, #1abc9c 50%, #27ae60 100%);
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             color: white;
-            padding: 45px 40px;
-            border-radius: 25px;
-            box-shadow: 0 8px 35px rgba(46, 204, 113, 0.4);
-            transition: all 0.3s ease;
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            padding: 16px 16px 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(46, 204, 113, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             position: relative;
-            overflow: hidden;
         }
-        
-        .support-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-        
-        .support-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(46, 204, 113, 0.5);
-        }
-        
+
         .support-card h3 {
-            font-size: 1.85em;
-            margin-bottom: 20px;
-            font-weight: 800;
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            font-size: 1rem;
+            margin-bottom: 6px;
+            font-weight: 700;
         }
-        
+
         .support-card p {
-            font-weight: 500;
-            line-height: 1.8;
-            position: relative;
-            z-index: 1;
-            font-size: 1.05em;
+            font-size: 0.86rem;
+            line-height: 1.6;
         }
-        
+
         .note {
             background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
-            border-left: 6px solid #ff6b35;
-            padding: 28px;
-            margin: 28px 0;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+            border-left: 4px solid #ff6b35;
+            padding: 14px 14px;
+            margin: 14px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.12);
         }
-        
+
         .note strong {
             color: #d84315;
-            font-weight: 800;
-            font-size: 1.1em;
+            font-weight: 700;
+            font-size: 0.94rem;
         }
-        
+
         .note p {
             color: #4a6358;
-            margin-top: 10px;
-            font-weight: 500;
+            margin-top: 4px;
+            font-size: 0.86rem;
         }
-        
+
         ul {
             list-style: none;
             padding-left: 0;
-            margin: 20px 0;
+            margin: 8px 0 4px;
         }
-        
+
         ul li {
-            padding: 14px 0 14px 40px;
+            padding: 8px 0 8px 24px;
             position: relative;
-            font-size: 1.15em;
+            font-size: 0.9rem;
             color: #4a6358;
-            font-weight: 600;
-            border-bottom: 2px solid #e8f5e9;
+            font-weight: 500;
+            border-bottom: 1px solid #e8f5e9;
         }
-        
+
         ul li:last-child {
             border-bottom: none;
         }
-        
+
         ul li::before {
             content: '✓';
             position: absolute;
             left: 0;
             color: #ff6b35;
-            font-weight: 900;
-            font-size: 1.5em;
-            text-shadow: 0 3px 6px rgba(255, 107, 53, 0.4);
-            animation: checkBounce 2s ease-in-out infinite;
+            font-weight: 800;
+            font-size: 1.1rem;
         }
-        
-        @keyframes checkBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
-        }
-        
-        ul li:hover::before {
-            animation: checkSpin 0.5s ease-in-out;
-        }
-        
-        @keyframes checkSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
+
         footer {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             text-align: center;
-            padding: 50px 30px;
-            margin-top: 60px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
+            padding: 22px 18px 26px;
+            margin-top: 12px;
         }
-        
-        footer::before {
-            content: '💝';
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            font-size: 4em;
-            opacity: 0.08;
-            animation: heartbeat 2s ease-in-out infinite;
-        }
-        
-        footer::after {
-            content: '🎁';
-            position: absolute;
-            bottom: 20%;
-            right: 10%;
-            font-size: 4em;
-            opacity: 0.08;
-            animation: giftBounce 3s ease-in-out infinite;
-        }
-        
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        @keyframes giftBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
+
         footer h2 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-size: 1.05rem;
+            font-weight: 600;
         }
-        
-        @media (max-width: 768px) {
+
+        @media (min-width: 769px) {
+            body {
+                font-size: 16px;
+            }
             header {
-                min-height: 200px;
-                padding: 50px 25px;
+                padding: 60px 40px;
             }
-            
-            header::before {
-                width: 30%;
-                height: 40%;
-            }
-            
-            header::after {
-                width: 28%;
-                height: 38%;
-            }
-            
-            .header-text-bg {
-                width: 92%;
-                height: 75%;
-            }
-            
-            .header-panel-2 {
-                display: none;
-            }
-            
-            .logo {
-                padding: 12px 35px;
-                max-width: 85%;
-            }
-            
-            .logo-image {
-                max-height: 55px;
-            }
-            
-            .logo h1 {
-                font-size: 2.2em;
-                letter-spacing: 3px;
-            }
-            
-            header p {
-                font-size: 1em;
-                margin-top: 20px;
-            }
-            
-            .step-header {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 25px;
-                min-height: 140px;
-            }
-            
-            .step-header::before {
-                width: 28%;
-                height: 42%;
-            }
-            
-            .step-header::after {
-                width: 25%;
-                height: 40%;
-            }
-            
-            .step-text-bg {
-                width: 95%;
-                height: 80%;
-            }
-            
-            .step-panel-2 {
-                display: none;
-            }
-            
-            .step-number {
-                margin-right: 0;
-                margin-bottom: 18px;
-                width: 75px;
-                height: 75px;
-                font-size: 2.2em;
-            }
-            
-            .step-title {
-                font-size: 1.7em;
-            }
-            
-            .step-content {
-                padding: 35px 25px;
-            }
-            
             .intro {
-                padding: 35px 25px;
-                margin: 30px 15px;
+                padding: 32px 28px;
+                margin: 28px 24px 20px;
             }
-            
-            .intro h2 {
-                font-size: 1.8em;
+            .content {
+                padding: 0 24px 32px;
             }
-            
-            .intro p {
-                font-size: 1em;
+            .step {
+                margin-bottom: 24px;
+                border-radius: 20px;
             }
-            
-            .shipping-flow {
-                flex-direction: column;
-                padding: 10px 0;
+            .step-header {
+                padding: 22px 24px 18px;
             }
-            
-            .shipping-flow::before {
-                display: none;
+            .step-number {
+                width: 70px;
+                height: 70px;
+                font-size: 1.6rem;
             }
-            
-            .shipping-item {
-                margin-bottom: 25px;
+            .step-title {
+                font-size: 1.4rem;
             }
-            
-            .shipping-circle {
-                width: 80px;
-                height: 80px;
-                font-size: 1.5em;
+            .step-content {
+                padding: 20px 24px 22px;
             }
-            
             .sub-steps {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, minmax(0,1fr));
             }
-            
             .payment-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, minmax(0,1fr));
             }
-            
+            .shipping-flow {
+                flex-direction: row;
+                justify-content: space-between;
+            }
             .support-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .image-placeholder {
-                height: 200px;
-            }
-            
-            ul li {
-                font-size: 1em;
-                padding-left: 35px;
+                grid-template-columns: repeat(3, minmax(0,1fr));
             }
         }
     </style>
@@ -928,33 +554,27 @@
         <header>
             <div class="header-text-bg"></div>
             <div class="logo">
-                <!-- ロゴ画像を使用する場合は、下のimgタグのコメントを外して、srcに画像URLを指定してください -->
                 <img src="images/logo_yasune_mall_1_0.png" alt="yasuneモール" class="logo-image">
-                
-                <!-- ロゴ画像を使わない場合は、下のh1タグを使用します -->
                 <h1>使い方ガイド</h1>
             </div>
             <p>初めての方でもスムーズにご購入いただける、分かりやすい手順をご案内いたします</p>
-            <div class="header-panel-2"></div>
         </header>
-        
+
         <div class="intro">
             <h2>🛍️ お買い物の流れ</h2>
             <p>8つの簡単なステップで、安心してお買い物をお楽しみいただけます</p>
         </div>
-        
+
         <div class="content">
             <!-- Step 1 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">1</div>
                     <h2 class="step-title">商品を探す・選ぶ</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>お気に入りの商品を見つけるための3つの方法をご用意しています。</p>
-                    
+
                     <div class="sub-steps">
                         <div class="sub-step">
                             <div class="sub-step-number">01</div>
@@ -964,7 +584,7 @@
                             </div>
                             <p>トップページのカテゴリメニューから、ジャンル別に探すことができます。</p>
                         </div>
-                        
+
                         <div class="sub-step">
                             <div class="sub-step-number">02</div>
                             <div class="sub-step-title">検索ボックスを使用する</div>
@@ -973,93 +593,90 @@
                             </div>
                             <p>商品名やキーワードを入力して、目的の商品を素早く見つけられます。</p>
                         </div>
-                        
-                        <div class="sub-step">
+
+                        <div class="sub-step detail-step">
                             <div class="sub-step-number">03</div>
-                            <div class="sub-step-title">詳細を確認する</div>
+                            <div class="sub-step-title">詳細を確認する（補足）</div>
                             <div class="image-placeholder">
                                 <img src="https://i.imgur.com/zfZu3jY.png" alt="詳細画像">
                             </div>
-                            <p>気になる商品は詳細ページで説明文、画像など、詳細をじっくりチェックできます。</p>
+                            <p>気になる商品は詳細ページで説明文や画像をチェックできます。</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- 以下のステップは構造そのまま、スタイルのみ上記CSSで軽量化 -->
             <!-- Step 2 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">2</div>
                     <h2 class="step-title">カートに入れる</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>購入したい商品をショッピングカートに追加しましょう。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="カート画像">
                     </div>
-                    
+
                     <div class="highlight-box">
                         <h3>商品オプションの選択</h3>
                         <p>購入したい商品の数量を選択します。</p>
                     </div>
-                    
-                    <p style="font-size: 1.1em; margin: 20px 0; font-weight: 500;"><strong style="color: #2c3e50;">カートに追加：</strong> 「カートに入れる」ボタンを押して商品をショッピングカートに追加します。</p>
-                    
+
+                    <p style="font-size:0.9rem; margin:10px 0; font-weight:500;">
+                        <strong style="color:#2c3e50;">カートに追加：</strong> 「カートに入れる」ボタンを押して商品をショッピングカートに追加します。
+                    </p>
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="カート追加画像">
                     </div>
-                    
-                    <p>他の商品を購入する場合は、そのまま買い物を続けられます。カート内の商品はいつでも確認可能です。</p>
+
+                    <p style="font-size:0.9rem;">他の商品を購入する場合は、そのまま買い物を続けられます。カート内の商品はいつでも確認可能です。</p>
                 </div>
             </div>
-            
+
             <!-- Step 3 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">3</div>
                     <h2 class="step-title">カートの中身を確認</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>ご購入前に、カートの中身をしっかり確認しましょう。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="カート確認画像">
                     </div>
-                    
-                    <h3 style="color: #2c3e50; font-size: 1.6em; margin: 25px 0; font-weight: 700;">購入前のチェック</h3>
-                    <p style="margin-bottom: 15px;">カートページでは以下の内容をご確認いただけます。</p>
+
+                    <h3 style="color:#2c3e50; font-size:1rem; margin:14px 0 6px; font-weight:700;">購入前のチェック</h3>
+                    <p style="margin-bottom:8px; font-size:0.9rem;">カートページでは以下の内容をご確認いただけます。</p>
                     <ul>
                         <li>商品名と商品画像</li>
                         <li>数量と単価</li>
                         <li>合計金額</li>
                     </ul>
-                    <p style="margin-top: 20px; font-weight: 500;">数量を変更したい場合は「+/-」ボタンで変更してください。</p>
-                    <p style="font-weight: 500;">問題がなければ「レジへ進む」をクリックします。</p>
+                    <p style="margin-top:10px; font-weight:500; font-size:0.9rem;">数量を変更したい場合は「+/-」ボタンで変更してください。</p>
+                    <p style="font-weight:500; font-size:0.9rem;">問題がなければ「レジへ進む」をクリックします。</p>
                 </div>
             </div>
-            
+
             <!-- Step 4 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">4</div>
                     <h2 class="step-title">支払い方法の選択</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>お客様に合った支払い方法をお選びいただけます。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="支払い画像">
                     </div>
-                    
-                    <p style="font-size: 1.1em; margin: 25px 0; font-weight: 500;">ご希望のお支払い方法を選択し、情報に間違いがないか確認してから購入へお進みください。</p>
-                    
+
+                    <p style="font-size:0.9rem; margin:10px 0; font-weight:500;">ご希望のお支払い方法を選択し、情報に間違いがないか確認してから購入へお進みください。</p>
+
                     <div class="payment-grid">
                         <div class="payment-card">
                             <div class="payment-icon">💳</div>
@@ -1079,60 +696,56 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Step 5 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">5</div>
                     <h2 class="step-title">お届け先情報の入力</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>正確な配送のため、お届け先情報を入力してください。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="配送先画像">
                     </div>
-                    
+
                     <div class="sub-steps">
                         <div class="sub-step">
                             <div class="sub-step-title">1. 配送オプション</div>
                             <p>配送業者の指定は出来かねます。佐川急便、ヤマト運輸、日本郵便のいずれかの業者での配送になります。</p>
                         </div>
-                        
+
                         <div class="sub-step">
                             <div class="sub-step-title">2. 連絡先情報の入力</div>
                             <p>登録した会員情報が反映されています。別のお届け先への配送をご希望の場合は、「変更＞」ボタンより配送先を変更できます。</p>
                         </div>
                     </div>
-                    
+
                     <div class="note">
                         <strong>※ ご注意：</strong>
                         <p>郵便番号、都道府県、市区町村、番地、建物名などを正確に入力してください。入力間違いにご注意ください。</p>
                     </div>
-                    
-                    <p style="font-size: 1.1em; margin-top: 25px; font-weight: 500;">入力内容をよく見て「確認する」ボタンを押してください。</p>
+
+                    <p style="font-size:0.9rem; margin-top:10px; font-weight:500;">入力内容をよく見て「確認する」ボタンを押してください。</p>
                 </div>
             </div>
-            
+
             <!-- Step 6 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">6</div>
                     <h2 class="step-title">注文内容の最終確認</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>ご注文を確定する前に、内容を必ずご確認ください。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="最終確認画像">
                     </div>
-                    
-                    <h3 style="color: #2c3e50; font-size: 1.6em; margin: 25px 0; font-weight: 700;">ご注文内容の最終確認</h3>
-                    <p style="margin-bottom: 15px;">以下の内容をすべてご確認ください。</p>
+
+                    <h3 style="color:#2c3e50; font-size:1rem; margin:14px 0 6px; font-weight:700;">ご注文内容の最終確認</h3>
+                    <p style="margin-bottom:8px; font-size:0.9rem;">以下の内容をすべてご確認ください。</p>
                     <ul>
                         <li>注文商品の名前と数量</li>
                         <li>商品金額と手数料、配送料</li>
@@ -1140,24 +753,22 @@
                         <li>お届け先情報</li>
                         <li>お支払い内容</li>
                     </ul>
-                    
+
                     <div class="highlight-box">
-                        <p style="font-size: 1.2em; font-weight: 600;">全ての内容に問題がなければ「注文する」ボタンを押して注文を確定します。</p>
+                        <p style="font-size:0.95rem; font-weight:600;">全ての内容に問題がなければ「注文する」ボタンを押して注文を確定します。</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Step 7 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">7</div>
                     <h2 class="step-title">商品の発送と受け取り</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>ご注文後の流れをご案内します。</p>
-                    
+
                     <div class="shipping-flow">
                         <div class="shipping-item">
                             <div class="shipping-circle">01</div>
@@ -1167,12 +778,12 @@
                         <div class="shipping-item">
                             <div class="shipping-circle">02</div>
                             <strong>商品発送</strong>
-                            <p>通常○日前後で発送<br>(地域や状況により変動)</p>
+                            <p>通常○日前後で発送（地域や状況により変動）</p>
                         </div>
                         <div class="shipping-item">
                             <div class="shipping-circle">03</div>
                             <strong>配送中</strong>
-                            <p>追跡番号で配送状況を<br>確認できます</p>
+                            <p>追跡番号で配送状況を確認できます</p>
                         </div>
                         <div class="shipping-item">
                             <div class="shipping-circle">04</div>
@@ -1182,22 +793,20 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Step 8 -->
             <div class="step">
                 <div class="step-header">
-                    <div class="step-text-bg"></div>
                     <div class="step-number">8</div>
                     <h2 class="step-title">購入後のサポート</h2>
-                    <div class="step-panel-2"></div>
                 </div>
                 <div class="step-content">
                     <p>ご購入後も安心のサポート体制を整えております。</p>
-                    
+
                     <div class="image-placeholder">
                         <img src="https://i.imgur.com/zfZu3jY.png" alt="サポート画像">
                     </div>
-                    
+
                     <div class="support-grid">
                         <div class="support-card">
                             <h3>📋 マイページ</h3>
@@ -1212,7 +821,7 @@
                             <p>お客様都合での返品・交換はお受けできません。万が一届いた商品に品質的問題がある場合のみ、商品お届け後【3日以内】にご連絡ください。</p>
                         </div>
                     </div>
-                    
+
                     <div class="note">
                         <strong>※ 注意事項：</strong>
                         <p>商品状態の確認ができない場合、もしくは異なる商品と認識した上でご利用された場合には、返品・交換は出来かねますのでご了承ください。</p>
@@ -1220,10 +829,10 @@
                 </div>
             </div>
         </div>
-        
+
         <footer>
             <h2>Yasuneモールで、おトクにお買い物をお楽しみください。</h2>
         </footer>
     </div>
 </body>
-</html
+</html>
