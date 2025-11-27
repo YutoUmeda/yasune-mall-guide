@@ -200,11 +200,6 @@
             z-index: 0;
         }
 
-        .step-text-bg,
-        .step-panel-2 {
-            display: none;
-        }
-
         .step-number {
             background: white;
             color: #2ecc71;
@@ -262,11 +257,12 @@
             object-fit: cover;
         }
 
+        /* サブステップ：箱は2つだけ */
         .sub-steps {
             display: grid;
             grid-template-columns: 1fr;
             gap: 12px;
-            margin: 10px 0 4px;
+            margin: 10px 0 8px;
         }
 
         .sub-step {
@@ -302,25 +298,23 @@
             font-weight: 500;
         }
 
-        /* 「詳細を確認する」を補足テイストに */
-        .sub-step.detail-step {
-            border-color: #e3f6ee;
+        /* 「詳細を確認する」は一段下の補足ボックスとして表示 */
+        .detail-note {
+            margin-top: 6px;
+            padding: 10px 12px;
+            border-radius: 10px;
             background: #f9fdfb;
-            padding: 10px 10px 12px;
-        }
-        .sub-step.detail-step .sub-step-number {
-            font-size: 0.7rem;
-            opacity: 0.8;
-        }
-        .sub-step.detail-step .sub-step-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #3f5b4a;
-        }
-        .sub-step.detail-step p {
+            border: 1px dashed #d5f4e6;
             font-size: 0.8rem;
-            line-height: 1.5;
-            opacity: 0.9;
+            color: #4a6358;
+            line-height: 1.6;
+        }
+
+        .detail-note-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #3f5b4a;
+            font-size: 0.82rem;
         }
 
         .highlight-box {
@@ -542,7 +536,7 @@
                 padding: 20px 24px 22px;
             }
             .sub-steps {
-                grid-template-columns: repeat(3, minmax(0,1fr));
+                grid-template-columns: repeat(2, minmax(0,1fr));
             }
             .payment-grid {
                 grid-template-columns: repeat(3, minmax(0,1fr));
@@ -581,7 +575,7 @@
                     <h2 class="step-title">商品を探す・選ぶ</h2>
                 </div>
                 <div class="step-content">
-                    <p>お気に入りの商品を見つけるための3つの方法をご用意しています。</p>
+                    <p>お気に入りの商品を見つけるための2つの方法をご用意しています。</p>
 
                     <div class="sub-steps">
                         <div class="sub-step">
@@ -601,15 +595,11 @@
                             </div>
                             <p>商品名やキーワードを入力して、目的の商品を素早く見つけられます。</p>
                         </div>
+                    </div>
 
-                        <div class="sub-step detail-step">
-                            <div class="sub-step-number">03</div>
-                            <div class="sub-step-title">詳細を確認する</div>
-                            <div class="image-placeholder">
-                                <img src="https://i.imgur.com/zfZu3jY.png" alt="詳細画像">
-                            </div>
-                            <p>気になる商品は詳細ページで説明文や画像をチェックできます。</p>
-                        </div>
+                    <div class="detail-note">
+                        <div class="detail-note-title">詳細ページでの確認</div>
+                        <p>気になる商品は詳細ページで説明文や画像をチェックできます。比較したい商品がある場合は、複数の商品ページを開いて内容を見比べてみてください。</p>
                     </div>
                 </div>
             </div>
